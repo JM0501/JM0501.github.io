@@ -26,36 +26,6 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-<script>
-// Get today's date
-let today = new Date().toDateString();
-
-// Get the stored data from local storage
-let lastDate = localStorage.getItem('lastUpdatedDate');
-let coffeeCount = localStorage.getItem('coffeeCount');
-
-// Set initial count if not already stored
-if (!coffeeCount) {
-	//Initial value
-  coffeeCount = 1005; 
-} else {
-  coffeeCount = parseInt(coffeeCount);
-}
-
-// Check if the current date is different from the last updated date
-if (today !== lastDate) {
-	// Increment by 2, may  vary depending on how busy with code i'm on that day
-  coffeeCount += 2;
-	// Store updated count
-  localStorage.setItem('coffeeCount', coffeeCount); 
-	// Store the last updated date
-  localStorage.setItem('lastUpdatedDate', today); 
-}
-
-// Update the DOM with the new coffee count
-document.getElementById('coffee-counter').textContent = coffeeCount;
-</script>
-
 	  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-48SJ7PM185"></script>
 <script>
@@ -329,8 +299,8 @@ document.getElementById('coffee-counter').textContent = coffeeCount;
           </div
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1005">0</strong>
+              <div class="text" id="coffee-counter">
+               
                 <span>Cups of coffee</span>
               </div>
             </div>
@@ -498,6 +468,35 @@ document.getElementById('coffee-counter').textContent = coffeeCount;
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+	  <script>
+// Get today's date
+let today = new Date().toDateString();
+
+// Get the stored data from local storage
+let lastDate = localStorage.getItem('lastUpdatedDate');
+let coffeeCount = localStorage.getItem('coffeeCount');
+
+// Set initial count if not already stored
+if (!coffeeCount) {
+	//Initial value
+  coffeeCount = 1005; 
+} else {
+  coffeeCount = parseInt(coffeeCount);
+}
+
+// Check if the current date is different from the last updated date
+if (today !== lastDate) {
+	// Increment by 2, may  vary depending on how busy with code i'm on that day
+  coffeeCount += 2;
+	// Store updated count
+  localStorage.setItem('coffeeCount', coffeeCount); 
+	// Store the last updated date
+  localStorage.setItem('lastUpdatedDate', today); 
+}
+
+// Update the DOM with the new coffee count
+document.getElementById('coffee-counter').textContent = coffeeCount;
+</script>
     
   </body>
 </html>
