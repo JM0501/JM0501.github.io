@@ -479,7 +479,7 @@ let coffeeCount = localStorage.getItem('coffeeCount');
 // Set initial count if not already stored
 if (!coffeeCount) {
 	//Initial value
-  coffeeCount = 1005; 
+  coffeeCount = parseInt(document.getElementById('coffee-counter').textContent); 
 } else {
   coffeeCount = parseInt(coffeeCount);
 }
