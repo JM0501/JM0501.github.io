@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!-- Styling and Icons -->
+    <link rel="stylesheet" href="style.css"> 
+
+    <!-- Title -->
+    <title>PassGen - Tshepang Mhl</title>
+</head>
+
+<body class="dark-mode">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="https://jm0501.github.io">Tshepang MHL</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://jm0501.github.io" target="_self">Home</a>
+                </li>
+                <!-- Dark-Light Mode Toggle Button -->
+                <li class="nav-item">
+                    <button id="themeToggleBtn" class="btn btn-secondary ml-3">Dark/Light Mode</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Password Generator Section -->
+    <section class="ftco-section bg-dark">
+        <div class="container">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Password Generator</h1>             
+            </div>
+            <div class="container bg-dark p-5 rounded shadow-sm">
+                <div class="ftco-animate">
+                    <label for="length" class="form-label text-light">Password Length:</label>
+                    <input type="number" id="length" class="form-control w-25 mx-auto mb-3" value="12">
+                </div>
+
+                <div class="form-check mb-2 ftco-animate">
+                    <input type="checkbox" class="form-check-input" id="includeUppercase" checked>
+                    <label class="form-check-label text-light" for="includeUppercase">Include Uppercase Letters</label>
+                </div>
+
+                <div class="form-check mb-2 ftco-animate">
+                    <input type="checkbox" class="form-check-input" id="includeNumbers" checked>
+                    <label class="form-check-label text-light" for="includeNumbers">Include Numbers</label>
+                </div>
+
+                <div class="form-check mb-4 ftco-animate">
+                    <input type="checkbox" class="form-check-input" id="includeSymbols" checked>
+                    <label class="form-check-label text-light" for="includeSymbols">Include Symbols</label>
+                </div>
+
+                <button id="generateBtn" class="btn btn-primary mb-4 ftco-animate">Generate Password</button>
+
+                <div class="mb-3 ftco-animate">
+                    <h2 class="h4 text-light">Generated Password:</h2>
+                    <div class="input-group w-50 mx-auto">
+                        <input type="text" class="form-control" id="passwordDisplay" readonly>
+                        <button class="btn btn-outline-secondary" id="copyBtn">Copy</button>
+                    </div>
+                </div>
+
+                <p id="copyMessage" class="text-success" style="display: none;">Password copied to clipboard!</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Logic script-->
+    <script src="script.js"></script>
+</body>
+
+</html>
